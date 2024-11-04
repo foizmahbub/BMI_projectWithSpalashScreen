@@ -21,11 +21,13 @@ class next : AppCompatActivity() {
             binding.BMITv.text =String.format("BMI is : %2f",bmi)
             binding.BMItypeTv.text=when(bmi){
                 in 1.00..18.4->"Under_weight"
-                in 18.5..25.5->"Perfect"
-                in 25.6..30.50->"Over Weight"
+                in 18.5..24.9->"Perfect"
+                in 25.0..29.9->"Over Weight"
+                in 30.0..34.9->"OBESE"
 
 
-                else -> "You are no more in the world"
+
+                else -> "Extremely OBESE"
             }
 
         }
